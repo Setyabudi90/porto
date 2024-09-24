@@ -859,11 +859,14 @@ footer .copyright {
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     width: 75%;
   }
   
-  .contact .contact-form form a {
-   width: 75%;
+  .contact .contact-form form .inputBox {
+    width: 75%;
+  }
+  
+  .contact .contact-form form #submit {
+    width: 75%;
   }
 
   #search-form {
