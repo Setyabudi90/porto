@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-icon">
+        <i class="fas fa-bars" id="menu"></i>
+        <i class="fas fa-envelope"></i>
+        <i class="fas fa-magnifying-glass" id="search-icon"></i>
+      </div>
+    </header>
+
+    <form action="" id="search-form">
+      <input
+        type="search"
+        placeholder="Search here..."
+        name="search"
+        id="search-box"
+      />
+      <label for="search-box" class="fa fa-search"></label>
+      <i class="fas fa-times" id="close"></i>
+    </form>
+
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h2>
+          Hi ✨, I'm
+          <span class="hero-name">Inggrit Setya Budi</span>
+        </h2>
+        <strong id="role" class="blink"></strong>
+        <p class="description" style="text-transform: none">
+          Hi! I’m a Software Engineering student passionate about creating
+          innovative apps and digital solutions. I’ve worked with Java, Python,
+          and JavaScript, using frameworks like React and Node.js. My projects
+          include e-commerce platforms and management systems. I’m eager to
+          learn and collaborate on exciting tech ideas. Let’s connect!
+        </p>
+        <a href="#" class="btn" download>
+          <i class="fa-solid fa-download"></i>
+          <span>Download CV</span>
+        </a>
+
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="images">
+        <img src="images/profiles.png" alt="hero-img" />
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="content">
+        <h2 class="heading">Tentang Saya</h2>
+        <h1>Yuk, kenalan dengan saya</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+          impedit laboriosam, maxime minima voluptatem necessitatibus
+          exercitationem culpa obcaecati recusandae sequi eaque, veritatis
+          laudantium cum atque.
+        </p>
+      </div>
+      <div class="main">
+        <h1>Mari berkenalan</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+          fugit quas praesentium, odit, vel officia dolores earum magni, vitae
+          omnis optio quo. Voluptatibus, exercitationem explicabo.
+        </p>
+        <div class="socials">
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="projects">
+      <div class="title">
+        <h2 class="heading">My Projects</h2>
+        <h1>Some of my projects</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      </div>
+      <div class="content">
+        <div class="cards">
+          <div class="card-body">
+            <div class="card-img">
+              <img src="images/zephyrai.png" alt="img" />
+            </div>
+            <div class="card-title">
+              <h3>Zephyr | AI Chat Bot</h3>
+            </div>
+            <div class="card-text">
+              <p>
+                Zephyrai is an AI chatbot that can answer questions fast and
+                related to technology powered with groq api.
+              </p>
+            </div>
+            <a
+              href="https://zephyrai.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+              role="button"
+              ><span>&rarr;</span> Kunjungi</a
+            >
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-body">
+            <div class="card-img">
+              <img src="images/Screenshot (54).png" alt="img" />
+            </div>
+            <div class="card-title">
+              <h3>Chat App | React & Firebase</h3>
+            </div>
+            <div class="card-text">
+              <p>
+                Chat Application with firebase and more features like send
+                image, video, photo and other
+              </p>
+            </div>
+            <a
+              href="https://chattings.vercel.app"
+              role="button"
+              rel="noreferrer"
+              ><span>&rarr;</span> Kunjungi</a
+            >
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-body">
+            <div class="card-img">
+              <img src="images/Screenshot (55).png" alt="img" />
+            </div>
+            <div class="card-title">
+              <h3>Animehh | Next.js & Tailwind</h3>
+            </div>
+            <div class="card-text">
+              <p>
+                Animehh is an application that can recommend you anime based on
+                your favorite and data
+              </p>
+            </div>
+            <a
+              href="https://animebase.vercel.app"
+              role="button"
+              referrerpolicy="no-referrer"
+              rel="noreferrer"
+              ><span>&rarr;</span> Kunjungi</a
+            >
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-body">
+            <div class="card-img">
+              <img src="images/Screenshot (58).png" alt="img" />
+            </div>
+            <div class="card-title">
+              <h3>Movie Apps | TMDb</h3>
+            </div>
+            <div class="card-text">
+              <p>
+                Movie Apps using TMDb API and more to make it responsive and
+                interesting
+              </p>
+            </div>
+            <a href="#"><span>&rarr;</span> Kunjungi</a>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-body">
+            <div class="card-img">
+              <img src="images/Screenshot (56).png" alt="img" />
+            </div>
+            <div class="card-title">
+              <h3>Restaurant App | Swiper</h3>
+            </div>
+            <div class="card-text">
+              <p>
+                Restaurant App using swiper and more to make it responsive and
+                interesting
+              </p>
+            </div>
+            <a
+              href="https://setyabudi90.github.io/restoran/"
+              role="button"
+              rel="noreferrer"
+              ><span>&rarr;</span> Kunjungi</a
+            >
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-body">
+            <div class="card-img">
+              <img src="images/Screenshot (57).png" alt="img" />
+            </div>
+            <div class="card-title">
+              <h3>Library Website | Landing Page</h3>
+            </div>
+            <div class="card-text">
+              <p>
+                library web for search and found rekomendation book using Google
+                Books API
+              </p>
+            </div>
+            <a
+              href="https://skarisalib.vercel.app"
+              role="button"
+              rel="noreferrer"
+              target="_blank"
+              referrerpolicy="no-referrer"
+              ><span>&rarr;</span> Kunjungi</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="sub-heading">Get In Touch</h2>
+      <h1 class="heading">Contact Me</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas totam
+        fugiat placeat consequuntur molestias dolorum alias accusamus, ullam
+        ratione perferendis modi? In ex beatae quidem.
+      </p>
+      <div class="contact-form">
+        <form action="">
+          <div class="inputBox">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Your Name" />
+          </div>
+          <div class="inputBox">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email"
+            />
+          </div>
+          <div class="inputBox">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+          <input type="submit" value="Send Message" id="submit" />
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="details">
+        <h1>Portfolio</h1>
+        <h2>Selengkapnya</h2>
+        <p>isbweb@gmail.com</p>
+        <p>Jl. Sekolahan RT 20 RW 05 Surabaya</p>
+        <p>
+          Jawa Timur <br />
+          Indonesia
+        </p>
+        <p>+62 812 3456 7890</p>
+        <p>Postal Code: 60225</p>
+      </div>
+
+      <div class="quick-links">
+        <h1>Quick Links</h1>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="social-media">
+        <h1>Follow Us</h1>
+        <ul>
+          <li>
+            <a href="">
+              <i class="fab fa-facebook"></i>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fab fa-instagram"></i>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fab fa-twitter"></i>
+              twitter
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fab fa-github"></i>
+              Github
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="separator"></div>
+      <p class="copyright">Copyright &copy; 2024 - Inggrit Setya Budi</p>
+      <div class="separator2"></div>
+    </footer>
+    <script defer src="script.js"></script>
+  </body>
+</html>
