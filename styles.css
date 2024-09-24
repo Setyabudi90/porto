@@ -860,6 +860,13 @@ footer .copyright {
     font-size: 1.6rem;
   }
 
+  .contact .contact-form form {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
+
   .contact .contact-form form .inputBox {
       width: 75%;
   }
