@@ -447,12 +447,17 @@ header .search-icon i:hover,
 
 .projects .content .cards {
   margin-bottom: 1.6rem;
+  right: 0;
+  left: 3rem;
+  align-items: center;
+  flex-basis: calc(50% - 20px);
 }
 
 .projects .content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .projects .content .card-body {
@@ -462,8 +467,8 @@ header .search-icon i:hover,
 }
 
 .projects .content .card-body .card-img img {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   object-fit: cover;
   box-shadow: var(--light-box-shadow);
@@ -488,8 +493,8 @@ header .search-icon i:hover,
 .projects .content .card-body a {
   background: var(--senary-color);
   border-radius: 10px;
-  padding: 0.7rem 1rem;
-  max-width: 30%;
+  padding: 0.5rem 2rem;
+  max-width: 25%;
   color: var(--secondary-color);
 }
 
@@ -559,8 +564,10 @@ header .search-icon i:hover,
   border-radius: 10px;
   outline: none;
   font-size: 1.6rem;
+  color: var(--secondary-color);
   border: 1px solid var(--senary-color);
   resize: none;
+  background-color: var(--primary-color);
 }
 
 .contact .contact-form form .inputBox input:focus,
@@ -700,7 +707,7 @@ footer .copyright {
 
 @media screen and (max-width: 576px) {
   html {
-    font-size: 75%;
+    font-size: 80%;
   }
 
   header nav ul {
@@ -735,6 +742,9 @@ footer .copyright {
   header nav ul li a:hover {
     color: var(--primary-color);
     margin-left: 1rem;
+    background: none;
+    padding: 0;
+    text-decoration: underline;
   }
 
   header .search-icon #menu {
@@ -808,6 +818,10 @@ footer .copyright {
     flex-direction: column;
   }
 
+  .projects .content .cards {
+    flex-basis: 100%;
+  }
+
   .projects .title {
     max-width: 100%;
   }
@@ -832,8 +846,10 @@ footer .copyright {
   }
 
   .projects .content .cards .card-body a {
+    display: flex;
     font-size: 0.8rem;
-    padding: 1rem;
+    width: 100%;
+    padding: 0.6rem;
     gap: 2px;
     border-radius: 4px;
   }
@@ -860,17 +876,6 @@ footer .copyright {
     font-size: 1.6rem;
   }
 
-  .contact .contact-form form {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-  }
-
-  .contact .contact-form form .inputBox {
-      width: 75%;
-  }
-
   footer {
     display: grid;
     grid-template-columns: 1fr;
@@ -890,5 +895,6 @@ footer .copyright {
 
   footer .copyright {
     margin-bottom: 1rem;
+    font-size: 14px;
   }
 }
