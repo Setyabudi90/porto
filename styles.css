@@ -876,21 +876,6 @@ footer .copyright {
     font-size: 1.6rem;
   }
 
-  .contact .contact-form form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .contact .contact-form form #submit {
-    width: 75%;
-  }
-
-  .contact .contact-form form .inputBox {
-    width: 75%;
-  }
-
   footer {
     display: grid;
     grid-template-columns: 1fr;
