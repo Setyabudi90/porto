@@ -854,6 +854,21 @@ footer .copyright {
     border-radius: 4px;
   }
 
+  .contact .contact-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact .contact-form form .inputBox {
+    width: 75%;
+  }
+
+  .contact .contact-form form #submit {
+    width: 75%;
+  }
+
   #search-form {
     font-size: 1rem;
     max-width: 100%;
