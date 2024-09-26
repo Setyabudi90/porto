@@ -1,20 +1,20 @@
 const hero = document.querySelector(".hero"),
   header = document.querySelector("header"),
   menu = document.querySelector("#menu"),
-  nav = document.querySelector("header nav ul");
+  nav = document.querySelector("header nav ul"),
+  up = document.querySelector(".up");
 
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     if (!entry.isIntersecting) {
-//       header.classList.add("glass");
-//       console.log(entry);
-//     } else {
-//       header.classList.remove("glass");
-//     }
-//   });
-// });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      up.classList.add("active");
+    } else {
+      up.classList.remove("active");
+    }
+  });
+});
 
-// observer.observe(hero);
+observer.observe(hero);
 
 window.onscroll = () => {
   header.classList.toggle("glass", window.scrollY > 0);
