@@ -55,7 +55,6 @@
   font-family: "Roboto", sans-serif;
   list-style: none;
   text-decoration: none;
-  scroll-behavior: smooth;
   transition: all 0.3s ease-in-out;
   border: none;
 }
