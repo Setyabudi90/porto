@@ -18,6 +18,14 @@
     />
     <meta name="title" content="Portfolio of Inggrit Setya Budi" />
     <meta
+      name="description"
+      content="Portfolio of Inggrit Setya Budi, a software engineer who is passionate about creating innovative apps and digital solutions."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, inggrit, setya, budi, software engineer"
+    />
+    <meta
       property="image"
       content="https://i.ibb.co.com/Sn7b3YN/dashboard-profile-logo-transformed.jpg"
     />
@@ -33,7 +41,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <div class="search-icon">
+      <div class="search-icon" data-aos="fade-right" data-aos-duration="1000">
         <i class="fas fa-bars" id="menu"></i>
         <i class="fas fa-envelope"></i>
         <i class="fas fa-magnifying-glass" id="search-icon"></i>
@@ -368,11 +376,13 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script>
-      AOS.init({
-        duration: 1000,
-        easing: "ease-in-out",
-        delay: 100,
-        once: true,
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          duration: 1000,
+          easing: "ease-in-out",
+          delay: 100,
+          once: true,
+        });
       });
     </script>
     <script defer src="script.js"></script>
