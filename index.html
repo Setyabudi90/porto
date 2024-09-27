@@ -8,11 +8,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css" />
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" data-aos="fade-down" data-aos-duration="1000">
       <h1>Portfolio</h1>
       <nav>
         <ul>
@@ -41,7 +42,7 @@
     </form>
 
     <section class="hero" id="hero">
-      <div class="hero-content">
+      <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
         <h2>
           Hi ✨, I'm
           <span class="hero-name">Inggrit Setya Budi</span>
@@ -66,13 +67,13 @@
           <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
-      <div class="images">
+      <div class="images" data-aos="zoom-in" data-aos-duration="1000">
         <img src="images/profiles.png" alt="hero-img" />
       </div>
     </section>
 
     <section class="about" id="about">
-      <div class="content">
+      <div class="content" data-aos="fade-right" data-aos-duration="1000">
         <h2 class="heading">Tentang Saya</h2>
         <h1>Yuk, kenalan dengan saya</h1>
         <p>
@@ -82,7 +83,7 @@
           laudantium cum atque.
         </p>
       </div>
-      <div class="main">
+      <div class="main" data-aos="fade-left" data-aos-duration="1000">
         <h1>Mari berkenalan</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
@@ -98,13 +99,13 @@
       </div>
     </section>
     <section class="projects" id="projects">
-      <div class="title">
+      <div class="title" data-aos="fade-down" data-aos-duration="1000">
         <h2 class="heading">My Projects</h2>
         <h1>Some of my projects</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
       </div>
       <div class="content">
-        <div class="cards">
+        <div class="cards" data-aos="flip-right" data-aos-duration="1000">
           <div class="card-body">
             <div class="card-img">
               <img src="images/zephyrai.png" alt="img" />
@@ -127,7 +128,7 @@
             >
           </div>
         </div>
-        <div class="cards">
+        <div class="cards" data-aos="flip-left" data-aos-duration="1000">
           <div class="card-body">
             <div class="card-img">
               <img src="images/chats.png" alt="img" />
@@ -150,7 +151,7 @@
             >
           </div>
         </div>
-        <div class="cards">
+        <div class="cards" data-aos="flip-right" data-aos-duration="1000">
           <div class="card-body">
             <div class="card-img">
               <img src="images/animeh.png" alt="img" />
@@ -174,7 +175,7 @@
             >
           </div>
         </div>
-        <div class="cards">
+        <div class="cards" data-aos="flip-left" data-aos-duration="1000">
           <div class="card-body">
             <div class="card-img">
               <img src="images/movie.png" alt="img" />
@@ -191,7 +192,7 @@
             <a href="#"><span>&rarr;</span> Kunjungi</a>
           </div>
         </div>
-        <div class="cards">
+        <div class="cards" data-aos="flip-right" data-aos-duration="1000">
           <div class="card-body">
             <div class="card-img">
               <img src="images/rest.png" alt="img" />
@@ -214,7 +215,7 @@
             >
           </div>
         </div>
-        <div class="cards">
+        <div class="cards" data-aos="flip-left" data-aos-duration="1000">
           <div class="card-body">
             <div class="card-img">
               <img src="images/lib.png" alt="img" />
@@ -241,7 +242,12 @@
       </div>
     </section>
 
-    <section class="contact" id="contact">
+    <section
+      class="contact"
+      id="contact"
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+    >
       <h2 class="sub-heading">Get In Touch</h2>
       <h1 class="heading">Contact Me</h1>
       <p>
@@ -250,7 +256,7 @@
         ratione perferendis modi? In ex beatae quidem.
       </p>
       <div class="contact-form">
-        <form action="">
+        <form>
           <div class="inputBox">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" placeholder="Your Name" />
@@ -274,12 +280,12 @@
               placeholder="Your Message"
             ></textarea>
           </div>
-          <input type="submit" value="Send Message" id="submit" />
+          <button type="submit" id="submit">Send Message</button>
         </form>
       </div>
     </section>
 
-    <footer>
+    <footer data-aos="fade-up" data-aos-duration="1000">
       <div class="details">
         <h1>Portfolio</h1>
         <h2>Selengkapnya</h2>
@@ -345,10 +351,20 @@
       <div class="separator2"></div>
     </footer>
     <button class="up">
-      <a href="#">
+      <a href="">
         <i class="fa-solid fa-arrow-up"></i>
       </a>
     </button>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        delay: 100,
+        once: true,
+      });
+    </script>
     <script defer src="script.js"></script>
   </body>
 </html>

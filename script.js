@@ -16,6 +16,10 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(hero);
 
+up.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 window.onscroll = () => {
   header.classList.toggle("glass", window.scrollY > 0);
 };
