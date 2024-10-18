@@ -707,8 +707,8 @@ footer .copyright {
 
 .up {
   position: fixed;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   font-size: 1.5rem;
   background-color: var(--tertiary-color);
   border-radius: 50%;
@@ -721,13 +721,37 @@ footer .copyright {
   transition: 0.4s ease-in;
 }
 
-.up a i {
+.music {
+  position: fixed;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 1.2rem;
+  background-color: var(--tertiary-color);
+  border-radius: 50%;
+  bottom: 0;
+  left: 0;
+  margin: 1rem 1rem;
   color: var(--secondary-color);
+  border: 1px solid var(--senary-color);
+  transition: 0.4s ease-in;
+  cursor: pointer;
 }
 
-.up:hover {
-  background-color: var(--septenary-color);
-  color: var(--quinary-color);
+.music.playing {
+  background-color: var(--quinary-color);
+  color: var(--tertiary-color);
+  animation: rotate 3s linear infinite;
+}
+
+.up a i {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+.up:hover,
+.up a i:hover {
+  background-color: var(--quinary-color);
+  color: var(--tertiary-color);
 }
 
 .up.active {
@@ -931,10 +955,15 @@ footer .copyright {
 
   footer .quick-links {
     margin-left: 0;
+    margin-bottom: 1rem;
   }
 
   footer .social-media {
     margin-left: 0;
+  }
+
+  footer .social-media ul li {
+    margin-bottom: 0.5rem;
   }
 
   footer .separator2 {

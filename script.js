@@ -2,7 +2,8 @@ const hero = document.querySelector(".hero"),
   header = document.querySelector("header"),
   menu = document.querySelector("#menu"),
   nav = document.querySelector("header nav ul"),
-  up = document.querySelector(".up");
+  up = document.querySelector(".up"),
+  music = document.querySelector(".music");
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -24,6 +25,20 @@ up.addEventListener("click", (e) => {
 window.onscroll = () => {
   header.classList.toggle("glass", window.scrollY > 0);
 };
+
+const audio = new Audio("audio/TheFatRat - Monody (feat. Laura Brehm).mp3");
+
+music.addEventListener("click", () => {
+  if (audio.paused && !music.ended) {
+    audio.play();
+    music.classList.add("playing");
+    music.children[0].classList.replace("fa-music", "fa-pause");
+  } else {
+    audio.pause();
+    music.classList.remove("playing");
+    music.children[0].classList.replace("fa-pause", "fa-music");
+  }
+});
 
 menu.addEventListener("click", () => {
   nav.classList.toggle("active");
