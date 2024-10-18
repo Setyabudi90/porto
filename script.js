@@ -16,7 +16,8 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(hero);
 
-up.addEventListener("click", () => {
+up.addEventListener("click", (e) => {
+  e.preventDefault();
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
