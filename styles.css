@@ -770,7 +770,7 @@ footer .copyright {
   top: 3.5rem;
   right: 0;
   background-color: var(--primary-color);
-  min-width: 160px;
+  min-width: 120px;
   z-index: 1;
   border-radius: 5px;
   padding: 0.5rem;
@@ -1048,6 +1048,12 @@ html.dark {
 
   #search-form label {
     font-size: 1.6rem;
+  }
+
+  .dropdown-content div:hover {
+    background-color: #3c86cc;
+    color: var(--secondary-color);
+    border-radius: 10px;
   }
 
   footer {
