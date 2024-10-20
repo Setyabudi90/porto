@@ -31,6 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
   applyTheme(DefaultTheme);
 });
 
+document.addEventListener("click", (e) => {
+  if (e.target !== themeButton && e.target !== dropdown) {
+    dropdownContent.classList.remove("show");
+    container.children[1].classList.remove("fa-angle-up");
+  }
+});
+
 themeButton.addEventListener("click", () => {
   dropdownContent.classList.toggle("show");
   container.children[1].classList.toggle("fa-angle-up");
