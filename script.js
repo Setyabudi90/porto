@@ -3,7 +3,11 @@ const hero = document.querySelector(".hero"),
   menu = document.querySelector("#menu"),
   nav = document.querySelector("header nav ul"),
   up = document.querySelector(".up"),
-  music = document.querySelector(".music");
+  music = document.querySelector(".music"),
+  themeButton = document.getElementById("theme-button"),
+  dropdownContent = document.querySelector(".dropdown-content"),
+  dropdown = document.getElementById("dropdown"),
+  container = document.querySelector(".container");
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -22,6 +26,53 @@ up.addEventListener("click", (e) => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const DefaultTheme = localStorage.getItem("theme") || "system";
+  applyTheme(DefaultTheme);
+});
+
+themeButton.addEventListener("click", () => {
+  dropdownContent.classList.toggle("show");
+  container.children[1].classList.toggle("fa-angle-up");
+});
+
+dropdownContent.addEventListener("click", (e) => {
+  const selectedTheme = e.target.getAttribute("data-theme");
+  localStorage.removeItem("theme");
+  if (selectedTheme) {
+    applyTheme(selectedTheme);
+    localStorage.setItem("theme", selectedTheme);
+    dropdownContent.classList.remove("show");
+    container.children[1].classList.remove("fa-angle-up");
+  }
+});
+
+function applyTheme(theme) {
+  if (theme === "system") {
+    const media = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (media) {
+      document.documentElement.setAttribute("data-theme", "dark");
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      document.documentElement.classList.add("light");
+      document.documentElement.classList.remove("dark");
+    }
+    themeButton.textContent = "System";
+  } else if (theme === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.add("light");
+    themeButton.textContent = "Light";
+  } else if (theme === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+    document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("light");
+    themeButton.textContent = "Dark";
+  }
+}
+
 window.onscroll = () => {
   header.classList.toggle("glass", window.scrollY > 0);
 };
@@ -37,25 +88,6 @@ music.addEventListener("click", () => {
     audio.pause();
     music.classList.remove("playing");
     music.children[0].classList.replace("fa-pause", "fa-music");
-  }
-});
-
-document.getElementById("theme").addEventListener("click", (event) => {
-  const { value } = event.target;
-  const doc = document.documentElement;
-
-  if (!localStorage.getItem("theme")) {
-    localStorage.setItem("theme", "dark");
-  }
-
-  if (value === "light") {
-    doc.setAttribute("data-theme", "light");
-  } else if (value === "dark") {
-    doc.setAttribute("data-theme", "dark");
-  } else if (value === "system") {
-    doc.setAttribute("data-theme", "system");
-  } else {
-    console.warn("Invalid theme value");
   }
 });
 
