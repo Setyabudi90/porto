@@ -737,6 +737,68 @@ footer .copyright {
   cursor: pointer;
 }
 
+.theme-toggle-mode select {
+  background: none;
+  color: var(--secondary-color);
+  border: none;
+  outline: none;
+}
+
+option {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+option:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+html[data-theme="light"] {
+  --primary-color: rgb(12, 43, 78);
+  --secondary-color: rgb(236, 227, 227);
+
+  body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+
+    input::placeholder,
+    textarea::placeholder {
+      color: var(--secondary-color);
+    }
+
+    .hero-name,
+    #role {
+      color: #382a7a;
+      filter: brightness(1.5);
+    }
+
+    button,
+    .hero .hero-content a {
+      box-shadow: 0 0 0.5rem skyblue;
+      color: #fff;
+    }
+
+    footer {
+      background-color: #051136;
+    }
+  }
+}
+
+html[data-theme="dark"] {
+  body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+}
+
 .music.playing {
   background-color: var(--quinary-color);
   color: var(--tertiary-color);
@@ -973,5 +1035,6 @@ footer .copyright {
   footer .copyright {
     margin-bottom: 1rem;
     font-size: 14px;
+    text-align: center;
   }
 }

@@ -40,6 +40,25 @@ music.addEventListener("click", () => {
   }
 });
 
+document.getElementById("theme").addEventListener("click", (event) => {
+  const { value } = event.target;
+  const doc = document.documentElement;
+
+  if (!localStorage.getItem("theme")) {
+    localStorage.setItem("theme", "dark");
+  }
+
+  if (value === "light") {
+    doc.setAttribute("data-theme", "light");
+  } else if (value === "dark") {
+    doc.setAttribute("data-theme", "dark");
+  } else if (value === "system") {
+    doc.setAttribute("data-theme", "system");
+  } else {
+    console.warn("Invalid theme value");
+  }
+});
+
 menu.addEventListener("click", () => {
   nav.classList.toggle("active");
   if (!header.classList.contains("glass")) {
