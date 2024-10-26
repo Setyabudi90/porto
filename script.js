@@ -7,7 +7,8 @@ const hero = document.querySelector(".hero"),
   themeButton = document.getElementById("theme-button"),
   dropdownContent = document.querySelector(".dropdown-content"),
   dropdown = document.getElementById("dropdown"),
-  container = document.querySelector(".container");
+  container = document.querySelector(".container"),
+  img = document.getElementById("hero-img");
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -26,9 +27,25 @@ up.addEventListener("click", (e) => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const DefaultTheme = localStorage.getItem("theme") || "system";
   applyTheme(DefaultTheme);
+
+  const imagePath = "/images/profiles.png";
+
+  const CV_PATH = "/CV/InggritSetyaBudi_CV.pdf";
+
+  const responseCV = await fetch(CV_PATH);
+  const blobCV = await responseCV.blob();
+  const urlCV = URL.createObjectURL(blobCV);
+
+  document.querySelector("a.btn").setAttribute("href", urlCV);
+
+  const response = await fetch(imagePath);
+  const blob = await response.blob();
+  const url = URL.createObjectURL(blob);
+
+  img.src = url;
 });
 
 document.addEventListener("click", (e) => {

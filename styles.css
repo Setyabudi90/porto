@@ -1036,6 +1036,10 @@ html.dark {
     align-items: center;
   }
 
+  .main p {
+    max-width: 95%;
+  }
+
   #search-form #search-box {
     font-size: 1.6rem;
     width: 300px;
