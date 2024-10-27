@@ -936,6 +936,10 @@ html.dark {
     max-width: 300px;
   }
 
+  .hero .hero-content .socials {
+    z-index: 99;
+  }
+
   .hero .images {
     display: flex;
     justify-content: center;
