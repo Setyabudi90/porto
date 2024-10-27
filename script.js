@@ -56,8 +56,8 @@ document.addEventListener("click", (e) => {
 });
 
 themeButton.addEventListener("click", () => {
-  dropdownContent.classList.toggle("show");
   container.children[1].classList.toggle("fa-angle-up");
+  dropdownContent.classList.toggle("show");
 });
 
 dropdownContent.addEventListener("click", (e) => {
@@ -78,22 +78,27 @@ function applyTheme(theme) {
       document.documentElement.setAttribute("data-theme", "dark");
       document.documentElement.classList.add("dark");
       document.documentElement.classList.remove("light");
+      themeButton.classList.remove("fa-solid", "fa-sun");
+      themeButton.classList.add("fa-solid", "fa-moon");
     } else {
       document.documentElement.setAttribute("data-theme", "light");
       document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
+      themeButton.classList.remove("fa-solid", "fa-moon");
+      themeButton.classList.add("fa-solid", "fa-sun");
     }
-    themeButton.textContent = "System";
   } else if (theme === "light") {
     document.documentElement.setAttribute("data-theme", "light");
     document.documentElement.classList.remove("dark");
     document.documentElement.classList.add("light");
-    themeButton.textContent = "Light";
+    themeButton.classList.remove("fa-solid", "fa-moon");
+    themeButton.classList.add("fa-solid", "fa-sun");
   } else if (theme === "dark") {
     document.documentElement.setAttribute("data-theme", "dark");
     document.documentElement.classList.add("dark");
     document.documentElement.classList.remove("light");
-    themeButton.textContent = "Dark";
+    themeButton.classList.remove("fa-solid", "fa-sun");
+    themeButton.classList.add("fa-solid", "fa-moon");
   }
 }
 

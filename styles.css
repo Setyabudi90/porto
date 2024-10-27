@@ -765,6 +765,17 @@ footer .copyright {
   color: var(--senary-color);
 }
 
+div[data-theme] {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: var(--senary-color);
+    text-shadow: #3c86cc 0 0 0.5rem;
+    filter: drop-shadow(0 0 10px var(--tertiary-color));
+  }
+}
+
 .dropdown-content {
   position: absolute;
   top: 3.5rem;
