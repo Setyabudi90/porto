@@ -340,7 +340,7 @@ header .search-icon i:hover,
 
 .about .content {
   max-width: 600px;
-  gap: 10px;
+  gap: 6px;
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
@@ -353,7 +353,7 @@ header .search-icon i:hover,
 }
 
 .about .content h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 500;
   color: var(--secondary-color);
 }
@@ -436,13 +436,13 @@ header .search-icon i:hover,
 }
 
 .projects .title p {
-  color: var(--secondary-color);
+  color: rgba(255, 245, 255, 0.5);
   font-weight: 100;
   font-size: 1rem;
   text-align: center;
   font-family: var(--primary-font);
   text-transform: capitalize;
-  width: 70%;
+  max-width: 36rem;
 }
 
 .projects .content .cards {
@@ -529,10 +529,11 @@ header .search-icon i:hover,
 }
 
 .contact p {
-  max-width: 600px;
   text-align: center;
+  color: rgba(255, 245, 255, 0.5);
   font-family: var(--primary-font);
-  font-weight: 100;
+  font-weight: 500;
+  max-width: 36rem;
 }
 
 .contact .contact-form {
@@ -702,6 +703,11 @@ footer .copyright {
 @media screen and (max-width: 768px) {
   footer {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects .title p {
+    max-width: 36rem;
+    font-weight: 500;
   }
 }
 

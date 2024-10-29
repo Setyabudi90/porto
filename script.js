@@ -106,7 +106,7 @@ window.onscroll = () => {
   header.classList.toggle("glass", window.scrollY > 0);
 };
 
-const audio = new Audio("audio/TheFatRat - Monody (feat. Laura Brehm).mp3");
+const audio = new Audio("audio/On My Way.mp3");
 
 music.addEventListener("click", () => {
   if (audio.paused && !music.ended) {
