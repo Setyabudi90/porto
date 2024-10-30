@@ -352,6 +352,38 @@ header .search-icon i:hover,
   color: var(--senary-color);
 }
 
+.details-music {
+  position: fixed;
+  display: flex;
+  padding: 0.5rem 2rem;
+  align-items: center;
+  gap: 10px;
+  bottom: 1.4rem;
+  left: -30rem;
+  border-radius: 10px;
+  box-shadow: 0 0 0.5rem var(--tertiary-color);
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s;
+}
+
+.details-music.shown {
+  left: 4.9rem;
+}
+
+.details-music .details-heading {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--senary-color);
+}
+
+.details-music .details-text {
+  font-weight: 400;
+  font-family: var(--primary-font);
+  color: var(--quinary-color);
+  font-size: 12px;
+}
+
 .about .content h1 {
   font-size: 2.5rem;
   font-weight: 500;
@@ -728,6 +760,7 @@ footer .copyright {
 }
 
 .music {
+  z-index: 99;
   position: fixed;
   width: 3.5rem;
   height: 3.5rem;
@@ -884,6 +917,16 @@ html.dark {
 
   header {
     width: 100vw;
+  }
+
+  .up {
+    width: 3rem;
+    height: 3rem;
+    font-size: 8px;
+
+    a i {
+      font-size: 14px;
+    }
   }
 
   header nav ul {

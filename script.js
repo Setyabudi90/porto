@@ -107,18 +107,30 @@ window.onscroll = () => {
 };
 
 const audio = new Audio("audio/On My Way.mp3");
+const detailMusic = document.querySelector(".details-music");
 
 music.addEventListener("click", () => {
   if (audio.paused && !music.ended) {
     audio.play();
     music.classList.add("playing");
     music.children[0].classList.replace("fa-music", "fa-pause");
+    detailMusic.classList.add("shown");
+    setTimeout(() => {
+      detailMusic.classList.remove("shown");
+    }, 5000);
   } else {
     audio.pause();
     music.classList.remove("playing");
     music.children[0].classList.replace("fa-pause", "fa-music");
   }
 });
+
+audio.onended = () => {
+  music.classList.remove("playing");
+  music.children[0].classList.replace("fa-pause", "fa-music");
+  audio.currentTime = 0;
+  audio.pause();
+};
 
 menu.addEventListener("click", () => {
   nav.classList.toggle("active");
