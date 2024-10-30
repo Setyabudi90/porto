@@ -122,6 +122,7 @@ music.addEventListener("click", () => {
     audio.pause();
     music.classList.remove("playing");
     music.children[0].classList.replace("fa-pause", "fa-music");
+    detailMusic.classList.remove("shown");
   }
 });
 
