@@ -660,13 +660,15 @@ footer .details h1 {
   color: var(--senary-color);
   font-weight: bold;
   font-size: 2rem;
+  text-decoration: underline var(--senary-color);
   text-transform: capitalize;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 footer .details h2 {
-  color: var(--senary-color);
+  color: rgb(161, 184, 34);
   opacity: 0.8;
+  font-family: "Pacifico", sans-serif;
   margin-bottom: 0.5rem;
 }
 
@@ -870,7 +872,7 @@ html.light {
 
     input::placeholder,
     textarea::placeholder {
-      color: var(--secondary-color);
+      color: #999393;
     }
 
     .hero-name,
