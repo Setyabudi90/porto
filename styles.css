@@ -392,7 +392,7 @@ header .search-icon i:hover,
 
 .about .content p {
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 400;
   font-family: var(--primary-font);
   color: var(--secondary-color);
 }
@@ -411,7 +411,7 @@ header .search-icon i:hover,
 
 .about .main p {
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 400;
   font-family: var(--primary-font);
   color: var(--secondary-color);
 }
@@ -469,10 +469,10 @@ header .search-icon i:hover,
 
 .projects .title p {
   color: rgba(255, 245, 255, 0.5);
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1rem;
   text-align: center;
-  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
   text-transform: capitalize;
   max-width: 36rem;
 }
@@ -515,7 +515,7 @@ header .search-icon i:hover,
 
 .projects .content .card-body .card-text p {
   color: var(--secondary-color);
-  font-weight: 100;
+  font-weight: 500;
   font-size: 1rem;
   max-width: 80%;
   font-family: var(--primary-font);
@@ -694,7 +694,7 @@ footer .quick-links h1 {
 footer .quick-links ul {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 7px;
 }
 
 footer .quick-links ul li a {
